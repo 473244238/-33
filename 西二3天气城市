@@ -1,0 +1,90 @@
+/*
+SQLyog Professional v12.08 (64 bit)
+MySQL - 5.7.19 : Database - thethirdtask3
+*********************************************************************
+*/
+
+/*!40101 SET NAMES utf8 */;
+
+/*!40101 SET SQL_MODE=''*/;
+
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`thethirdtask3` /*!40100 DEFAULT CHARACTER SET utf8 */;
+
+USE `thethirdtask3`;
+
+/*Table structure for table `city` */
+
+DROP TABLE IF EXISTS `city`;
+
+CREATE TABLE `city` (
+  `id` varchar(30) NOT NULL COMMENT '城市id',
+  `name` varchar(30) NOT NULL COMMENT '城市名称',
+  `lat` varchar(30) NOT NULL COMMENT '城市纬度',
+  `lon` varchar(30) NOT NULL COMMENT '城市经度',
+  `country` varchar(30) DEFAULT NULL COMMENT '国家',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/*Data for the table `city` */
+
+insert  into `city`(`id`,`name`,`lat`,`lon`,`country`) values ('101010100','北京','39.90499','116.40529','中国'),('101020100','上海','31.23171','121.47264','中国'),('101230101','福州','26.07530','119.30624','中国');
+
+/*Table structure for table `weather1` */
+
+DROP TABLE IF EXISTS `weather1`;
+
+CREATE TABLE `weather1` (
+  `name` varchar(30) NOT NULL COMMENT '城市名称',
+  `fxdate` varchar(30) NOT NULL COMMENT '当日日期',
+  `tempmax` varchar(30) NOT NULL COMMENT '当日最高气温',
+  `tempmin` varchar(30) NOT NULL COMMENT '当日最低气温',
+  `textday` varchar(30) NOT NULL COMMENT '白天天气情况',
+  PRIMARY KEY (`name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/*Data for the table `weather1` */
+
+insert  into `weather1`(`name`,`fxdate`,`tempmax`,`tempmin`,`textday`) values ('上海','2023-01-12','18','13','小雨'),('北京','2023-01-12','3','0','小雪'),('福州','2023-01-12','22','16','小雨');
+
+/*Table structure for table `weather2` */
+
+DROP TABLE IF EXISTS `weather2`;
+
+CREATE TABLE `weather2` (
+  `name` varchar(30) NOT NULL COMMENT '城市名称',
+  `fxdate` varchar(30) NOT NULL COMMENT '当日日期',
+  `tempmax` varchar(30) NOT NULL COMMENT '当日最高气温',
+  `tempmin` varchar(30) NOT NULL COMMENT '当日最低气温',
+  `textday` varchar(30) NOT NULL COMMENT '白天天气情况',
+  PRIMARY KEY (`name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/*Data for the table `weather2` */
+
+insert  into `weather2`(`name`,`fxdate`,`tempmax`,`tempmin`,`textday`) values ('上海','2023-01-13','17','9','中雨'),('北京','2023-01-13','3','-3','小雪'),('福州','2023-01-13','21','17','小雨');
+
+/*Table structure for table `weather3` */
+
+DROP TABLE IF EXISTS `weather3`;
+
+CREATE TABLE `weather3` (
+  `name` varchar(30) NOT NULL COMMENT '城市名称',
+  `fxdate` varchar(30) NOT NULL COMMENT '当日日期',
+  `tempmax` varchar(30) NOT NULL COMMENT '当日最高气温',
+  `tempmin` varchar(30) NOT NULL COMMENT '当日最低气温',
+  `textday` varchar(30) NOT NULL COMMENT '白天天气情况',
+  PRIMARY KEY (`name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/*Data for the table `weather3` */
+
+insert  into `weather3`(`name`,`fxdate`,`tempmax`,`tempmin`,`textday`) values ('上海','2023-01-14','10','2','小雨'),('北京','2023-01-14','1','-8','多云'),('福州','2023-01-14','24','14','多云');
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;

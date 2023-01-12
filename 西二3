@@ -1,0 +1,51 @@
+/*
+SQLyog Professional v12.08 (64 bit)
+MySQL - 5.7.19 : Database - thethirdtask3
+*********************************************************************
+*/
+
+/*!40101 SET NAMES utf8 */;
+
+/*!40101 SET SQL_MODE=''*/;
+
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`thethirdtask3` /*!40100 DEFAULT CHARACTER SET utf8 */;
+
+USE `thethirdtask3`;
+
+/*Table structure for table `collegegrade` */
+
+DROP TABLE IF EXISTS `collegegrade`;
+
+CREATE TABLE `collegegrade` (
+  `classnum` varchar(10) NOT NULL COMMENT '班级编号',
+  `name` varchar(30) NOT NULL COMMENT '姓名',
+  `entrytime` datetime DEFAULT NULL COMMENT '进班时间',
+  PRIMARY KEY (`name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/*Data for the table `collegegrade` */
+
+/*Table structure for table `collegestudent` */
+
+DROP TABLE IF EXISTS `collegestudent`;
+
+CREATE TABLE `collegestudent` (
+  `studentid` int(10) NOT NULL AUTO_INCREMENT COMMENT '学生id',
+  `studentnum` varchar(10) NOT NULL COMMENT '学生学号',
+  `name` varchar(30) NOT NULL COMMENT '姓名',
+  `sex` varchar(2) NOT NULL COMMENT '性别',
+  `enrollment time` datetime DEFAULT NULL COMMENT '学生入学时间',
+  `address` varchar(100) DEFAULT NULL COMMENT '学生家庭地址',
+  PRIMARY KEY (`studentid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/*Data for the table `collegestudent` */
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
