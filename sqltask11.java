@@ -1,4 +1,4 @@
-package li.西二task3;
+package li.西二task3;//基础题
 import li.西二task3.sqltask1;
 
 import java.sql.*;
@@ -62,11 +62,10 @@ public class sqltask11 {
         PreparedStatement st=null;
         try{
             conn= sqltask1.getConnection();
-            //区别
-            //使用？占位符代替参数
+          
             String sql="delete from collegestudent where studentid=?";
-            st=conn.prepareStatement(sql);//预编译SQL，先写SQL，然后不执行
-            //手动给参数赋值
+            st=conn.prepareStatement(sql);
+           
             st.setInt(1,id2);
 
 
