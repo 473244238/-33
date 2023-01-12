@@ -1,4 +1,4 @@
-package li.西二task3;
+package li.西二task3;//处理天气信息一些方法
 
 import li.lesson2.util.util.jbdcutils;
 
