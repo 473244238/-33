@@ -1,4 +1,4 @@
-package li.西二task3;
+package li.西二task3;//这个代码就是用来创建一mysql,用于基础题和提升题
 import li.lesson2.util.util.jbdcutils;
 import sun.net.ConnectionResetException;
 import java.sql.*;
